@@ -1,0 +1,39 @@
+@startuml Two Modes - Technical View
+
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v13.0/dist
+!include AWSPuml/AWSCommon.puml
+
+' Uncomment the following line to create simplified view
+!include AWSPuml/AWSSimplified.puml
+
+!include AWSPuml/General/Users.puml
+
+!include AWSPuml/NetworkingContentDelivery/Route53.puml
+!include AWSPuml/NetworkingContentDelivery/CloudFront.puml
+!include AWSPuml/Storage/SimpleStorageService.puml
+!include AWSPuml/SecurityIdentityCompliance/CertificateManager.puml
+!include AWSPuml/Compute/Lambda.puml
+!include AWSPuml/Database/DynamoDB.puml
+!include AWSPuml/Compute/ElasticBeanstalk.puml
+!include AWSPuml/NetworkingContentDelivery/ElasticLoadBalancing.puml
+
+skinparam linetype polyline
+' skinparam linetype ortho
+
+left to right direction
+
+ElasticBeanstalk(eb,"ElasticBeanstalk","")
+ElasticLoadBalancing(elb, "Elastic Load Balancer","")
+DynamoDB(ddb, "DynamoDB","")
+CertificateManager(cm, "Certificate Manager", "provision, manage, and deploy public and private SSL/TLS certificates")
+Users(user, "Users", "millions of users")
+Route53(dns, "Route53", "highly available and scalable cloud Domain Name System (DNS) web service")
+
+eb -left-> cm
+user <--> dns: DNS Lookup
+user <--> elb: HTTPS GET
+elb --> eb: Render Page
+eb --> ddb: Get Records
+
+
+@enduml

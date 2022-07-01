@@ -1,0 +1,30 @@
+@startuml Two Mode Sample
+!pragma revision 1
+
+!define AzurePuml https://raw.githubusercontent.com/plantuml-stdlib/Azure-PlantUML/master/dist
+!includeurl AzurePuml/AzureCommon.puml
+
+ !includeurl AzurePuml/AzureSimplified.puml
+
+!includeurl AzurePuml/Storage/AzureBlobStorage.puml
+!includeurl AzurePuml/Networking/AzureCDNProfile.puml
+!includeurl AzurePuml/Networking/AzureDNS.puml
+!includeurl AzurePuml/Networking/AzureFrontDoor.puml
+!includeurl AzurePuml/Security/AzureKeyVault.puml
+
+
+LAYOUT_LEFT_RIGHT
+
+actor "Users" as users
+AzureBlobStorage(blob, "Azure Blob Storage", "")
+AzureCDNProfile(cdn,"Azure CDN","")
+AzureDNS(dns, "Azure DNS", "")
+AzureKeyVault(kv, "Azure Key Vault", "")
+
+users --> dns: DNS Lookup
+users --> cdn : HTTP GET
+cdn --> blob : Get file
+cdn -up-> kv : Get certificate
+
+
+@enduml

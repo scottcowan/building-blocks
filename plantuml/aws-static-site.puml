@@ -1,0 +1,31 @@
+@startuml Two Modes - Technical View
+
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v13.0/dist
+!include AWSPuml/AWSCommon.puml
+
+' Uncomment the following line to create simplified view
+!include AWSPuml/AWSSimplified.puml
+
+!include AWSPuml/General/Users.puml
+!include AWSPuml/NetworkingContentDelivery/Route53.puml
+!include AWSPuml/NetworkingContentDelivery/CloudFront.puml
+!include AWSPuml/Storage/SimpleStorageService.puml
+!include AWSPuml/SecurityIdentityCompliance/CertificateManager.puml
+
+skinparam linetype polyline
+' skinparam linetype ortho
+
+left to right direction
+
+CertificateManager(cm, "Certificate Manager", "provision, manage, and deploy public and private SSL/TLS certificates")
+Users(user, "Users", "millions of users")
+Route53(dns, "Route53", "highly available and scalable cloud Domain Name System (DNS) web service")
+CloudFront(cf, "CloudFront", "Content Delivery Network (CDN)")
+SimpleStorageService(s3, "S3","Static file storage")
+
+cf -left-> cm
+user <--> dns: DNS Lookup
+user <--> cf: HTTPS GET
+cf --> s3: Request object
+
+@enduml
