@@ -15,7 +15,7 @@
 
 ## Implementations
 
-### AWS
+### AWS - Cloudfront
 
 ![aws-static-site](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/valtech-uk/building-blocks/main/plantuml/aws-static-site.puml)
 
