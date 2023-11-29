@@ -18,10 +18,10 @@
 ## Implementations
 
 ### AWS - Lambda@Edge
-![aws-ssr-cf](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/valtech-uk/building-blocks/main/plantuml/aws-ssr-cf.puml)
+![aws-ssr-cf](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/scottcowan/building-blocks/main/plantuml/aws-ssr-cf.puml)
 
 ### AWS - Elasticbean
-![aws-ssr-eb](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/valtech-uk/building-blocks/main/plantuml/aws-ssr-eb.puml)
+![aws-ssr-eb](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/scottcowan/building-blocks/main/plantuml/aws-ssr-eb.puml)
 
 ### Azure - App Service Web app
 
