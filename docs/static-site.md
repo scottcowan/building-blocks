@@ -17,7 +17,7 @@
 
 ### AWS - Cloudfront
 
-![aws-static-site](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/valtech-uk/building-blocks/main/plantuml/aws-static-site.puml)
+![aws-static-site](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/scottcowan/building-blocks/main/plantuml/aws-static-site.puml)
 
 | Component                                 | Description                                                                                                                                                                                                         |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,7 +28,7 @@
 
 ### Azure - CDN
 
-![azure-static-site-1](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/valtech-uk/building-blocks/main/plantuml/azure-static-site-1.puml)
+![azure-static-site-1](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/scottcowan/building-blocks/main/plantuml/azure-static-site-1.puml)
 
 ### Azure - Front Door
 
